@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-
+import { demoRoutes } from "./demo";
 const routes = [
   {
     path: "/",
@@ -12,6 +12,9 @@ const routes = [
     name: "show",
     meta: { title: "展示页" },
     component: import("@/views/home/show.vue"),
+    children: [
+      ...demoRoutes
+    ]
   },
 ];
 

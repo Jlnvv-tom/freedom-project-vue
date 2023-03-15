@@ -13,7 +13,7 @@
               <QqOutlined />
             </template>
             <template #title>Item 1</template>
-            <a-menu-item key="1">Option 1</a-menu-item>
+            <a-menu-item key="demo/highlight">搜索高亮示例</a-menu-item>
             <a-menu-item key="2">Option 2</a-menu-item>
           </a-menu-item-group>
           <a-menu-item-group key="g2" title="Item 2">
@@ -53,6 +53,8 @@
 <script>
 import { defineComponent, ref, watch } from 'vue';
 import { MailOutlined, QqOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons-vue';
+import { useRouter, useRoute } from 'vue-router';
+
 export default defineComponent({
   components: {
     MailOutlined,
@@ -63,8 +65,11 @@ export default defineComponent({
   setup() {
     const selectedKeys = ref(['1']);
     const openKeys = ref(['sub1']);
+    const router = useRouter();
+    const route = useRoute();
     const handleClick = e => {
-      console.log('click', e);
+      console.log('click', selectedKeys.value, route, router, e);
+      router.push(e.key)
     };
     const titleClick = e => {
       console.log('titleClick', e);
