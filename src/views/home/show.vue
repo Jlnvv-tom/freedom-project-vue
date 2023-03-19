@@ -7,41 +7,25 @@
           <template #icon>
             <MailOutlined />
           </template>
-          <template #title>Navigation One</template>
-          <a-menu-item-group key="g1">
-            <template #icon>
-              <QqOutlined />
-            </template>
-            <template #title>Item 1</template>
-            <a-menu-item key="demo/highlight">搜索高亮示例</a-menu-item>
-            <a-menu-item key="2">Option 2</a-menu-item>
-          </a-menu-item-group>
-          <a-menu-item-group key="g2" title="Item 2">
-            <a-menu-item key="3">Option 3</a-menu-item>
-            <a-menu-item key="4">Option 4</a-menu-item>
-          </a-menu-item-group>
+          <template #title>常见前端业务示例</template>
+          <a-menu-item key="/demo/highlight">搜索高亮</a-menu-item>
+          <a-menu-item key="/demo/select">选中多个标签</a-menu-item>
         </a-sub-menu>
         <a-sub-menu key="sub2" @titleClick="titleClick">
           <template #icon>
             <AppstoreOutlined />
           </template>
-          <template #title>Navigation Two</template>
-          <a-menu-item key="5">Option 5</a-menu-item>
-          <a-menu-item key="6">Option 6</a-menu-item>
-          <a-sub-menu key="sub3" title="Submenu">
-            <a-menu-item key="7">Option 7</a-menu-item>
-            <a-menu-item key="8">Option 8</a-menu-item>
-          </a-sub-menu>
+          <template #title>常见前端业务示例</template>
+          <a-menu-item key="/demo/highlight">搜索高亮</a-menu-item>
+          <a-menu-item key="/demo/select">选中多个标签</a-menu-item>
         </a-sub-menu>
-        <a-sub-menu key="sub4">
+        <a-sub-menu key="sub3">
           <template #icon>
             <SettingOutlined />
           </template>
-          <template #title>Navigation Three</template>
-          <a-menu-item key="9">Option 9</a-menu-item>
-          <a-menu-item key="10">Option 10</a-menu-item>
-          <a-menu-item key="11">Option 11</a-menu-item>
-          <a-menu-item key="12">Option 12</a-menu-item>
+          <template #title>常见前端业务示例</template>
+          <a-menu-item key="/demo/highlight">搜索高亮</a-menu-item>
+          <a-menu-item key="/demo/select">选中多个标签</a-menu-item>
         </a-sub-menu>
       </a-menu>
     </div>
@@ -63,12 +47,11 @@ export default defineComponent({
     SettingOutlined,
   },
   setup() {
-    const selectedKeys = ref(['1']);
+    const selectedKeys = ref(['/demo/highlight']);
     const openKeys = ref(['sub1']);
     const router = useRouter();
     const route = useRoute();
     const handleClick = e => {
-      console.log('click', selectedKeys.value, route, router, e);
       router.push(e.key)
     };
     const titleClick = e => {
@@ -99,7 +82,8 @@ export default defineComponent({
   }
 
   &-content {
-    flex: 1
+    flex: 1;
+    padding: 16px;
   }
 }
 </style>
