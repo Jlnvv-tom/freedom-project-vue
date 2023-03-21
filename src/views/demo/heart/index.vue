@@ -14,14 +14,15 @@
   width: 100%;
   height: 100%;
   background-color: pink;
-  position: relative;
+  position: absolute;
+  z-index: -10;
   margin: -16px;
 
   &-frame {
-    position: absolute;
+    position: relative;
     width: 400px;
     height: 300px;
-    // margin: 250px auto;
+    margin: 250px auto;
   }
 }
 
