@@ -26,6 +26,7 @@
           <template #title>常见前端业务示例</template>
           <a-menu-item key="/demo/highlight">搜索高亮</a-menu-item>
           <a-menu-item key="/demo/select">选中多个标签</a-menu-item>
+          <a-menu-item key="/demo/heart">心脏跳动</a-menu-item>
         </a-sub-menu>
       </a-menu>
     </div>
