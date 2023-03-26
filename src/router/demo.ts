@@ -17,4 +17,10 @@ export const demoRoutes = [
     meta: { title: "心脏跳动页面" },
     component: import("@/views/demo/heart/index.vue"),
   },
+  {
+    path: "/demo/1024-game",
+    name: "demo.1024-game",
+    meta: { title: "2048小游戏页面" },
+    component: import("@/views/demo/1024-game/index.vue"),
+  },
 ];
