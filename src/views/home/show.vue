@@ -18,7 +18,7 @@
           <a-menu-item key="/demo/1024-game">1024小游戏</a-menu-item>
 
         </a-sub-menu>
-        <a-sub-menu key="sub2" @titleClick="titleClick">
+        <!-- <a-sub-menu key="sub2" @titleClick="titleClick">
           <template #icon>
             <AppstoreOutlined />
           </template>
@@ -34,12 +34,14 @@
           <a-menu-item key="/demo/highlight">搜索高亮</a-menu-item>
           <a-menu-item key="/demo/select">选中多个标签</a-menu-item>
           <a-menu-item key="/demo/heart">心脏跳动</a-menu-item>
-        </a-sub-menu>
+        </a-sub-menu> -->
         <a-sub-menu key="sub4" @titleClick="titleClick">
           <template #icon>
             <SettingOutlined />
           </template>
-          <template #title>常见前端业务示例</template>
+          <template #title>测试示例页面</template>
+          <a-menu-item key="/test-page/tree">tree拖拽</a-menu-item>
+          <a-menu-item key="/test-page/custom-event">customEvent自定义事件</a-menu-item>
         </a-sub-menu>
       </a-menu>
     </div>

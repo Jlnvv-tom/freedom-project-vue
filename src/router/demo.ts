@@ -23,4 +23,16 @@ export const demoRoutes = [
     meta: { title: "2048小游戏页面" },
     component: import("@/views/demo/1024-game/index.vue"),
   },
+  {
+    path: "/test-page/tree",
+    name: "test-page.tree",
+    meta: { title: "拖拽树测试示例" },
+    component: import("@/views/test-page/tree/index.vue"),
+  }, 
+  {
+    path: "/test-page/custom-event",
+    name: "test-page.custom-event",
+    meta: { title: "拖拽树测试示例" },
+    component: import("@/views/test-page/event/index.vue"),
+  },
 ];
