@@ -3,7 +3,7 @@
     style="width:400px;margin-bottom:16px;" @search="onSearch" />
   <a-tree :tree-data="treeData" v-model:selectedKeys="selectedKeys" v-model:expandedKeys="expandedKeys">
     <template #title="{ title, key }">
-      {{ title }}
+      <span v-html="highlightHandle(searchText, title)"></span>
     </template>
   </a-tree>
 </template>
@@ -31,6 +31,12 @@ expandedKeys.value.push(treeData.value[0].key)
 const onSearch = () => {
 
 
+}
+
+const highlightHandle = (searchText: string = "", targetText: string = "") => {
+  let reg = new RegExp(searchText, "gi");
+  let highlight = (match: any) => `<span style="color:red;">${match}</span>`;
+  return targetText.replace(reg, highlight);
 }
 console.log("treeData", treeData)
 </script>
