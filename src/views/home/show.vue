@@ -1,12 +1,13 @@
 <template>
   <div class="show">
     <div class="show-menu">
-      <a-button class="show-menu-toggle" type="primary" @click="toggleCollapsed">
+      <a-button class="show-menu-toggle" :style="collapsed ? { marginLeft: '0px' } : {}" type="primary"
+        @click="toggleCollapsed">
         <MenuUnfoldOutlined v-if="collapsed" />
         <MenuFoldOutlined v-else />
       </a-button>
-      <a-menu class="show-menu-self" v-model:openKeys="openKeys" v-model:selectedKeys="selectedKeys" mode="inline"
-        :inline-collapsed="collapsed" @click="handleClick">
+      <a-menu class="show-menu-self" :style="collapsed ? { width: '46px' } : {}" v-model:openKeys="openKeys"
+        v-model:selectedKeys="selectedKeys" mode="inline" :inline-collapsed="collapsed" @click="handleClick">
         <a-sub-menu key="sub1" @titleClick="titleClick">
           <template #icon>
             <MailOutlined />
@@ -18,15 +19,15 @@
           <a-menu-item key="/demo/1024-game">1024小游戏</a-menu-item>
 
         </a-sub-menu>
-        <!-- <a-sub-menu key="sub2" @titleClick="titleClick">
+        <a-sub-menu key="sub2" @titleClick="titleClick">
           <template #icon>
             <AppstoreOutlined />
           </template>
-          <template #title>常见前端业务示例</template>
-          <a-menu-item key="/demo/highlight">搜索高亮</a-menu-item>
+          <template #title>常见CSS效果示例</template>
+          <a-menu-item key="/demo/ground-glass">毛玻璃效果</a-menu-item>
           <a-menu-item key="/demo/select">选中多个标签</a-menu-item>
         </a-sub-menu>
-        <a-sub-menu key="sub3">
+        <!-- <a-sub-menu key="sub3">
           <template #icon>
             <QqOutlined />
           </template>
@@ -79,12 +80,11 @@ const toggleCollapsed = () => {
   height: 100%;
 
   &-menu {
-    min-width: 256px;
-    min-height: 100%;
+    // width: 256px;
+    // min-height: 100%;
 
     &-toggle {
-      position: relative;
-      left: 0;
+      margin-left: 210px
     }
 
     &-self {

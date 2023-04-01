@@ -28,7 +28,13 @@ export const demoRoutes = [
     name: "test-page.tree",
     meta: { title: "拖拽树测试示例" },
     component: import("@/views/test-page/tree/index.vue"),
-  }, 
+  },
+  {
+    path: "/demo/ground-glass",
+    name: "demo.ground-glass",
+    meta: { title: "拖拽树测试示例" },
+    component: import("@/views/demo/css-collect/ground-glass.vue"),
+  },
   {
     path: "/test-page/custom-event",
     name: "test-page.custom-event",
