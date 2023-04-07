@@ -15,11 +15,11 @@ const searchText = ref("")
 const selectedKeys = ref<string[]>([]);
 const expandedKeys = ref<string[]>([]);
 const treeData = computed(() => {
-  return arrayData.map(item => {
+  return arrayData.map((item:any) => {
     return {
       key: item.group_id,
       title: item.group_name,
-      children: item.group_children.map(child => {
+      children: item.group_children.map((child:any) => {
         return { key: child.label_id, title: child.label_name }
       })
     }

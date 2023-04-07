@@ -60,10 +60,10 @@ const openKeys = ref(['sub1']);
 const router = useRouter();
 
 const collapsed = ref(false)
-const handleClick = e => {
+const handleClick = (e: any) => {
   router.push(e.key)
 };
-const titleClick = e => {
+const titleClick = (e: any) => {
   console.log('titleClick', e);
 };
 watch(() => openKeys, val => {

@@ -17,7 +17,7 @@ const Click = () => {
   }))
 }
 
-const listenFn = (e) => {
+const listenFn = (e: any) => {
   console.log(e.detail)
   displayCount.value += e.detail.value
 }
