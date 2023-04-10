@@ -32,8 +32,20 @@ export const demoRoutes = [
   {
     path: "/demo/ground-glass",
     name: "demo.ground-glass",
-    meta: { title: "拖拽树测试示例" },
+    meta: { title: "毛玻璃示例" },
     component: import("@/views/demo/css-collect/ground-glass.vue"),
+  },
+  {
+    path: "/demo/ground-glass-2",
+    name: "demo.ground-glass-2",
+    meta: { title: "毛玻璃示例2" },
+    component: import("@/views/demo/css-collect/ground-glass-2.vue"),
+  },
+  {
+    path: "/demo/flex-layout",
+    name: "demo.flex-layout",
+    meta: { title: "flex布局" },
+    component: import("@/views/demo/css-collect/flex/index.vue"),
   },
   {
     path: "/test-page/custom-event",

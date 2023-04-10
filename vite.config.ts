@@ -15,7 +15,6 @@ export default defineConfig({
         replacement: pathResolve("src") + "/",
       },
     ],
-    extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"],
   },
   server: {
     open: true,
