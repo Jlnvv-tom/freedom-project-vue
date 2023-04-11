@@ -1,11 +1,11 @@
-interface IFlex {
+export interface IFlexConfig {
   key: string;
   value: string[];
   description?: string; // 描述
   default?: string; // 默认值
 }
 
-const flexContainerConfig: IFlex[] = [
+const flexContainerConfig: IFlexConfig[] = [
   {
     key: "flex-direction",
     value: ["row", "column", "row-reverse", "column-reverse"],
@@ -26,7 +26,7 @@ const flexContainerConfig: IFlex[] = [
     default: "row nowrap",
   },
   {
-    key: "flex-content",
+    key: "justify-content",
     value: [
       "flex-start",
       "flex-end",
@@ -37,7 +37,7 @@ const flexContainerConfig: IFlex[] = [
     description: "定义了项目在主轴上的对齐方式。",
   },
   {
-    key: "flex-items",
+    key: "align-items",
     value: ["flex-start", "flex-end", "center", "baseline", "stretch"],
     description: "定义项目在交叉轴上如何对齐",
     default: "flex-start",
@@ -59,14 +59,8 @@ const flexContainerConfig: IFlex[] = [
 ];
 function getFlexWrapValue() {
   const value: string[] = [];
-  const flexDirectionValue = flexContainerConfig.find(
-    (item) => item.key === "flex-direction"
-  )?.value;
-  const flexWrapValue = flexContainerConfig.find(
-    (item) => item.key === "flex-wrap"
-  )?.value;
-  flexDirectionValue?.forEach((fdv) => {
-    flexWrapValue?.forEach((fwv) => {
+  ["row", "column", "row-reverse", "column-reverse"].forEach((fdv) => {
+    ["nowrap", "wrap", "wrap-reverse"].forEach((fwv) => {
       const v = fdv + " " + fwv;
       value.push(v);
     });
