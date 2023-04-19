@@ -67,4 +67,10 @@ function getFlexWrapValue() {
   });
   return value;
 }
-export { flexContainerConfig };
+const flexItemConfig: IFlexConfig[] = [
+  // {
+  //   key:'order',
+  //   value:
+  // }
+];
+export { flexContainerConfig, flexItemConfig };
