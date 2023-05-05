@@ -27,6 +27,7 @@
           <a-menu-item key="/demo/ground-glass">毛玻璃效果</a-menu-item>
           <a-menu-item key="/demo/ground-glass-2">毛玻璃效果2</a-menu-item>
           <a-menu-item key="/demo/flex-layout">flex布局</a-menu-item>
+          <a-menu-item key="/demo/transition-transform">css 过渡-转换</a-menu-item>
         </a-sub-menu>
         <!-- <a-sub-menu key="sub3">
           <template #icon>

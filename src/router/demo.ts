@@ -48,6 +48,14 @@ export const demoRoutes = [
     component: import("@/views/demo/css-collect/flex/index.vue"),
   },
   {
+    path: "/demo/transition-transform",
+    name: "demo.transition.transform",
+    meta: { title: "transition" },
+    component: import(
+      "@/views/demo/css-collect/transition-transform/index.vue"
+    ),
+  },
+  {
     path: "/test-page/custom-event",
     name: "test-page.custom-event",
     meta: { title: "拖拽树测试示例" },
