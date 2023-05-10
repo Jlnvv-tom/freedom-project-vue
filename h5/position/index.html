@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer-container {
+      width: 500px;
+      height: 500px;
+      background: linear-gradient(to right, #fff, grey);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .midle-container {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(to right, #fff, red);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      overflow-y: auto;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      padding: 20px;
+      border-top: 130px solid #fff;
+    }
+
+    .inner-container {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(to right, #fff, yellow);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .target {
+      background: aqua;
+      position: fixed;
+      transform: translateY(-130px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer-container">
+    <div class="midle-container">
+      <div class="inner-container target">123</div>
+      <div class="inner-container">1</div>
+      <div class="inner-container">2</div>
+      <div class="inner-container">3</div>
+      <div class="inner-container">4</div>
+      <div class="inner-container">5</div>
+      <div class="inner-container">6</div>
+    </div>
+  </div>
+</body>
+
+</html>
