@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 50vw;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ball-1 {
+      background-color: gray;
+
+    }
+
+    .ball-2 {
+      background-color: rgb(179, 63, 63);
+
+    }
+
+    .ball-3 {
+      background-color: rgba(51, 168, 43, 0.675);
+
+    }
+
+    .ball-3>div {
+      animation: ball3 8s linear infinite;
+      animation-direction: alternate;
+      animation-play-state: running;
+      /*   running  or paused*/
+    }
+
+    @keyframes ball3 {
+      0% {
+        background: red;
+        left: 0px;
+        top: 0px;
+      }
+
+      25% {
+        background: yellow;
+        left: 200px;
+        top: 0px;
+      }
+
+      50% {
+        background: blue;
+        left: 200px;
+        top: 100px;
+      }
+
+      75% {
+        background: red;
+        left: -200px;
+        top: 100px;
+      }
+
+      100% {
+        background: green;
+        left: 0px;
+        top: 0px;
+      }
+    }
+
+    .ball-4 {
+      background-color: rgba(160, 188, 77, 0.619);
+
+    }
+
+    .ball-4>div {
+      animation: ball4 5s infinite;
+      /* animation-delay: 2s; */
+    }
+
+    @keyframes ball4 {
+      form {
+        /* right: 300px; */
+        transform: scale(0, 0);
+        opacity: 1;
+      }
+
+      to {
+        /* left: 300px */
+        transform: scale(3.5, 3.5);
+        opacity: 0.3;
+      }
+
+    }
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      border-radius: 50%
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="box ball-1">
+      <div class="ball flex-center">1</div>
+    </div>
+    <div class="box ball-2">
+      <div class="ball flex-center">2</div>
+    </div>
+    <div class="box ball-3">
+      <div class="ball flex-center">3</div>
+    </div>
+    <div class="box ball-4">
+      <div class="ball flex-center">4</div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

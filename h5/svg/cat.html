@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <svg width='140' heiight='170' xmlns='http://wwww.w3.org/2000/svg'>
+    <title>Cat</title>
+    <desc>Stick Figure of Cat</desc>
+    <!-- 在这里绘制图像 -->
+    <circle cx='70' cy='95' r='50' style='stroke:black; fill:none'></circle>
+    <circle cx='55' cy='80' r='5' stroke='black' fill='#3339933'></circle>
+    <circle cx='85' cy='80' r='5' stroke='black' fill='#3339933'></circle>
+    <g id='whiskers'>
+      <line x1='75' y1='95' x2='135' y2='85' style='stroke:black'></line>
+      <line x1='75' y1='95' x2='135' y2='105' style='stroke:black'></line>
+    </g>
+    <use xlink:href="#whiskers" transform="scale(-1,1) translate(-140,0)">
+  </svg>
+
+</body>
+
+</html>

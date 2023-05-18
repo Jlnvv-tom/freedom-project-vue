@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100vw;
+      height: 200px
+    }
+
+    .container>div {
+      width: 200px;
+      height: 100%;
+    }
+
+    .box1 {
+      background-color: aqua;
+
+    }
+
+    .box2 {
+      border-left-color: rgb(49, 187, 72);
+      border-left: 10px;
+    }
+
+    .box2:hover {
+      background-color: rgb(49, 187, 72);
+      transition-duration: 2s;
+      transition-property: background-color, border-color, width;
+      width: 500px;
+    }
+
+    .box3 {
+      background-color: rgb(171, 76, 206);
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi est consequuntur dolor enim porro voluptas tempore
+      dolorem amet provident officiis! Porro, omnis nulla. Eaque, cumque? Repellendus accusantium ex aliquam rerum?
+    </div>
+    <div class="box2">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum molestias, a nihil dolorum provident quasi aut
+      alias odit excepturi earum corrupti neque consectetur quos facilis aspernatur debitis iusto rem commodi.
+    </div>
+    <div class="box3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fuga minima consectetur ad, blanditiis ex
+      veniam? Veniam animi, fuga suscipit dicta nostrum nesciunt veritatis repellendus odit amet distinctio corporis
+      voluptatum?
+    </div>
+  </div>
+</body>
+
+</html>
