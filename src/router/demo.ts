@@ -29,12 +29,12 @@ export const demoRoutes = [
     meta: { title: "拖拽树测试示例" },
     component: import("@/views/test-page/tree/index.vue"),
   },
-  {
-    path: "/demo/ground-glass",
-    name: "demo.ground-glass",
-    meta: { title: "毛玻璃示例" },
-    component: import("@/views/demo/css-collect/ground-glass.vue"),
-  },
+  // {
+  //   path: "/demo/ground-glass",
+  //   name: "demo.ground-glass",
+  //   meta: { title: "毛玻璃示例" },
+  //   component: import("@/views/demo/css-collect/ground-glass.vue"),
+  // },
   {
     path: "/demo/ground-glass-2",
     name: "demo.ground-glass-2",
@@ -48,12 +48,24 @@ export const demoRoutes = [
     component: import("@/views/demo/css-collect/flex/index.vue"),
   },
   {
+    path: "/demo/hooks-page",
+    name: "demo.hooks-page",
+    meta: { title: "hooks-page页面" },
+    component: import("@/views/demo/hooks-page/index.vue"),
+  },
+  {
     path: "/demo/transition-transform",
     name: "demo.transition.transform",
     meta: { title: "transition" },
     component: import(
       "@/views/demo/css-collect/transition-transform/index.vue"
     ),
+  },
+  {
+    path: "/test-page/position",
+    name: "test-page.position",
+    meta: { title: "布局" },
+    component: import("@/views/test-page/position/index.vue"),
   },
   {
     path: "/test-page/custom-event",

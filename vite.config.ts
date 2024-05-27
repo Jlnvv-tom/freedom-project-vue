@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
 import { resolve } from "path";
 import { visualizer } from "rollup-plugin-visualizer"; // 依赖库体积分析插件
 function pathResolve(dir: string) {
@@ -19,5 +20,5 @@ export default defineConfig({
   server: {
     open: true,
   },
-  plugins: [vue(), visualizer({ open: true })],
+  plugins: [vue(), vueJsx(), visualizer({ open: true })],
 });

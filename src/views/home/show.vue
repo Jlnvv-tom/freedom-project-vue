@@ -1,13 +1,24 @@
 <template>
   <div class="show">
     <div class="show-menu">
-      <a-button class="show-menu-toggle" :style="collapsed ? { marginLeft: '0px' } : {}" type="primary"
-        @click="toggleCollapsed">
+      <a-button
+        class="show-menu-toggle"
+        :style="collapsed ? { marginLeft: '0px' } : {}"
+        type="primary"
+        @click="toggleCollapsed"
+      >
         <MenuUnfoldOutlined v-if="collapsed" />
         <MenuFoldOutlined v-else />
       </a-button>
-      <a-menu class="show-menu-self" :style="collapsed ? { width: '46px' } : {}" v-model:openKeys="openKeys"
-        v-model:selectedKeys="selectedKeys" mode="inline" :inline-collapsed="collapsed" @click="handleClick">
+      <a-menu
+        class="show-menu-self"
+        :style="collapsed ? { width: '46px' } : {}"
+        v-model:openKeys="openKeys"
+        v-model:selectedKeys="selectedKeys"
+        mode="inline"
+        :inline-collapsed="collapsed"
+        @click="handleClick"
+      >
         <a-sub-menu key="sub1" @titleClick="titleClick">
           <template #icon>
             <MailOutlined />
@@ -17,17 +28,19 @@
           <a-menu-item key="/demo/select">选中多个标签</a-menu-item>
           <a-menu-item key="/demo/heart">心脏跳动</a-menu-item>
           <a-menu-item key="/demo/1024-game">1024小游戏</a-menu-item>
-
+          <a-menu-item key="/demo/hooks-page">hooks-page页面</a-menu-item>
         </a-sub-menu>
         <a-sub-menu key="sub2" @titleClick="titleClick">
           <template #icon>
             <AppstoreOutlined />
           </template>
           <template #title>常见CSS效果示例</template>
-          <a-menu-item key="/demo/ground-glass">毛玻璃效果</a-menu-item>
+          <!-- <a-menu-item key="/demo/ground-glass">毛玻璃效果</a-menu-item> -->
           <a-menu-item key="/demo/ground-glass-2">毛玻璃效果2</a-menu-item>
           <a-menu-item key="/demo/flex-layout">flex布局</a-menu-item>
-          <a-menu-item key="/demo/transition-transform">css 过渡-转换</a-menu-item>
+          <a-menu-item key="/demo/transition-transform"
+            >css 过渡-转换</a-menu-item
+          >
         </a-sub-menu>
         <!-- <a-sub-menu key="sub3">
           <template #icon>
@@ -44,7 +57,10 @@
           </template>
           <template #title>测试示例页面</template>
           <a-menu-item key="/test-page/tree">tree拖拽</a-menu-item>
-          <a-menu-item key="/test-page/custom-event">customEvent自定义事件</a-menu-item>
+          <a-menu-item key="/test-page/position">布局</a-menu-item>
+          <a-menu-item key="/test-page/custom-event">
+            customEvent自定义事件</a-menu-item
+          >
         </a-sub-menu>
       </a-menu>
     </div>
@@ -53,29 +69,39 @@
     </div>
   </div>
 </template>
-<script setup  lang="ts">
-import { ref, watch } from 'vue';
-import { MailOutlined, QqOutlined, AppstoreOutlined, SettingOutlined, MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue';
-import { useRouter } from 'vue-router';
-const selectedKeys = ref(['/demo/highlight']);
-const openKeys = ref(['sub1']);
+<script setup lang="ts">
+import { ref, watch } from "vue";
+import {
+  MailOutlined,
+  QqOutlined,
+  AppstoreOutlined,
+  SettingOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+} from "@ant-design/icons-vue";
+import { useRouter } from "vue-router";
+const selectedKeys = ref(["/demo/highlight"]);
+const openKeys = ref(["sub1"]);
 const router = useRouter();
 
-const collapsed = ref(false)
+const collapsed = ref(false);
 const handleClick = (e: any) => {
-  router.push(e.key)
+  router.push(e.key);
 };
 const titleClick = (e: any) => {
-  console.log('titleClick', e);
+  console.log("titleClick", e);
 };
-watch(() => openKeys, val => {
-  console.log('openKeys', val);
-});
+watch(
+  () => openKeys,
+  (val) => {
+    console.log("openKeys", val);
+  }
+);
 const toggleCollapsed = () => {
   collapsed.value = !collapsed.value;
-}
+};
 </script>
-<style  lang="less" scoped>
+<style lang="less" scoped>
 .show {
   display: flex;
   width: 100%;
@@ -86,12 +112,12 @@ const toggleCollapsed = () => {
     // min-height: 100%;
 
     &-toggle {
-      margin-left: 210px
+      margin-left: 210px;
     }
 
     &-self {
       width: 256px;
-      height: 100%
+      height: 100%;
     }
   }
 
